@@ -1,0 +1,61 @@
+*{
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    background-image:url(carrusel.jpg);
+}
+body{
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Carrusel*/
+.carrusel{
+    width: 800px;
+    height: 650px;
+    overflow: hidden;
+}
+@media(min-width: 768px){
+    .carrusel{
+        max-width: 1000vh;
+        max-height: 1000vh;
+        min-width: 100vh;
+        min-height: 100vh;
+    }
+}
+
+
+/*Imagenes*/
+.images{
+    display: flex;
+    transform: translateY(0);
+    transition: transform 1s ease-in-out;
+    object-fit: cover;
+}
+
+
+/*Controles*/
+
+.controls{
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.btn{
+    border: none;
+    background-color: rgb(255, 255, 255);
+    flex-basis: 33%;
+    cursor: pointer;
+
+}
+.prev{
+    font-size: 25px;
+    color: rgb(58, 58, 58);
+}
+.next{
+    font-size: 25px;
+    color: rgb(58, 58, 58);
+}
